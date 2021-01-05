@@ -16,13 +16,13 @@ ostream& operator << (ostream& out, vector<int>& line){
 
 bool getLine(int g, int norm, int f = 0){
     if (norm <= g) {
-        cout << line << endl;
+        //cout << line << endl;
         return true;
     }
     if (f == line.size()) return false; // compare count of right with (norm - g)
     for (int i = f; i < line.size(); ++i){
         int l = 0, r = 0;
-        cout << leftq << endl << Q[f] << endl << line << endl;
+        //cout << "Leftq: " << leftq << endl <<  "Q[f]: " << Q[f] << endl << "Line: "<< line << endl;
         while (leftq.size() > l && Q[i].size() > r){
             if (leftq[l] == Q[i][r]){
                 line[i] = leftq[l];
